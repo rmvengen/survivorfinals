@@ -1,0 +1,109 @@
+<div id="wrapper" ng-class="vm.toggle ? 'toggled' : ''">
+
+    <sidebar></sidebar>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>{{vm.content}}</h1>
+                        <form novalidate>
+                            <div class="form-group">
+                                <label for="selectedContestantName">Name</label>
+                                <!--<select id="selectedContestantName" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedContestantName" 
+                                        ng-options="player.playerName for apt in vm.players"></select>-->
+                                        <!--
+                                    <input type="contestantName" class="form-control" id = "contestantName" placeholder= "Enter Contestant Name" name="contestantName">    
+                                <p class="bg-info" ng-bind="vm.selectedContestantsName.playerName"></p>
+                            </div>
+                            -->
+                            <!--
+                            <div class="form-group">
+                                <label for="selectContestantName">Contestant</label>
+                                <select id="selectContestantName" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedContestantName" 
+                                        ng-options="apt.contestantname for apt in vm.contestantdata"></select>
+                                <p class="bg-info" ng-bind="vm.selectedContestantName.survivorName"></p>
+                            </div>
+                            -->
+                            <div class="form-group">
+                                <label for="selectContestantName">Contestant Name</label>
+                                <select id="selectContestantName" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedContestantName" 
+                                        ng-options="contestant.contestantName for contestant in vm.contestantsData"></select>
+                                <p class="bg-info" ng-bind="vm.selectedContestantName.contestantName"></p>
+                            </div>   
+                            <p> This is season {{vm.selectedContestantName.seasonName}}</p>
+                            <p>{{vm.selectedContestantName.Age}} Age </p>
+                            <p>{{vm.selectedContestantName.finish}} Finish</p>
+                            
+                            
+                            <div class="form-group">
+                                <label for="selectSeasonName">Season Name</label>
+                                <select id="selectSeasonName" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedCSeasonName" 
+                                        ng-options="contestant.seasonName for contestant in vm.contestantsData"></select>
+                                <p class="bg-info" ng-bind="vm.selectedSeasonName.contestantName"></p>
+                            </div>   
+                            <p> This is season {{vm.selectedSeasonName.contestantName}}</p>
+                            <p>{{vm.selectedContestantName.Age}} Age </p>
+                            <p>{{vm.selectedContestantName.finish}} Finish</p>
+                            
+                            <div class="form-group">
+                                <label for="selectSeasonName">Season Name</label>
+                                <select id="selectSeasonName" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedSeasonName" 
+                                        ng-options="season.seasonName for season in vm.seasonsData"></select>
+                                <p class="bg-info" ng-bind="vm.selectedSeasonName.seasonName"></p>
+                            </div>   
+                            <p> SeasonNumber: {{vm.selectedSeasonName.seasonNumber}}</p>
+                            <p>Location of Season: {{vm.selectedSeasonName.seasonLocation}}</p>
+                            <p>Year of Season: {{vm.selectedSeasonName.yearOfSeason}}</p>
+                            <p>Month of Season: {{vm.selectedSeasonName.monthOfSeason}}</p>
+                            
+                            <div class="form-group">
+                                <label for="selectTribeName">Tribe</label>
+                                <select id="selectTribeName" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedOriginalTribe" 
+                                        ng-options="tribes.originalTribe for seasons in vm.tribesData"></select>
+                                <p class="bg-info" ng-bind="vm.selectedOriginalTribe.originalTribe"></p>
+                            </div>
+                        <!--
+                            <div class="form-group">
+                                <label for="selectWeight">Aircraft Weight (KG)</label>
+                                <select id="selectWeight" 
+                                        class="form-control" 
+                                        ng-model="vm.selectedWeight" 
+                                        ng-options="climb.weight for climb in vm.climbData"></select>
+                                <p class="bg-info" ng-bind="vm.selectedWeight.weight"></p>
+                            </div>    
+                            -->
+                        </form>
+                    
+                    <!--<a href="#menu-toggle" class="btn btn-default" id="menu-toggle" ng-click="toggleMenu">Toggle Menu</a>-->
+                    <button type="button" 
+                            class="btn btn-default btn-link" 
+                            id="menu-toggle" 
+                            ng-model="vm.toggle" 
+                            ng-click="vm.toggle=!vm.toggle">Toggle Menu</button>
+                    <button type="button" 
+                            class="btn btn-default" 
+                            id="clear-selected-data" 
+                            ng-click="vm.clearSelectedData()">Clear Selected</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
