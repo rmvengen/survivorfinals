@@ -13,11 +13,13 @@ if (process.env.NODE_ENV === 'production') {
 var promise = mongoose.connect(dbURI, {
   useMongoClient: true,
   /* other options */
+
 });
 
 //mongoose.connect(dbURI);
 
 // CONNECTION EVENTS
+
 mongoose.connection.on('connected', function() {
     console.log('Mongoose connected to ' + dbURI);
 });
@@ -58,3 +60,16 @@ process.on('SIGTERM', function() {
 // BRING IN YOUR SCHEMAS & MODELS
 require('./playerData');
 require('./survivorData');
+
+/*
+var mongoose = require('mongoose');
+
+var connectionstring = process.env.MONGODB_URI_KEY;
+mongoose.connect(connectionstring, { useMongoClient: true});
+console.log("DB STUFF");
+
+mongoose.Promise = global.Promise;
+
+//Bring in your schmas ^ models
+require('./survivorData');
+*/

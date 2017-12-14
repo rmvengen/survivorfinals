@@ -38,22 +38,12 @@
                                         ng-options="contestant.contestantName for contestant in vm.contestantsData"></select>
                                 <p class="bg-info" ng-bind="vm.selectedContestantName.contestantName"></p>
                             </div>   
-                            <p> This is season {{vm.selectedContestantName.seasonName}}</p>
-                            <p>{{vm.selectedContestantName.Age}} Age </p>
-                            <p>{{vm.selectedContestantName.finish}} Finish</p>
+                            <p>Contestant: {{vm.selectedContestantName.contestantName}}</p>
+                            <p>From: {{vm.selectedContestantName.livingLocationCity}} , {{vm.selectedContestantName.livingLocationState}}</p>
+                            <p>Season: {{vm.selectedContestantName.seasonName}}</p>
+                            <p>Age: {{vm.selectedContestantName.Age}} </p>
+                            <p>Place finished: {{vm.selectedContestantName.finish}} </p>
                             
-                            
-                            <div class="form-group">
-                                <label for="selectSeasonName">Season Name</label>
-                                <select id="selectSeasonName" 
-                                        class="form-control" 
-                                        ng-model="vm.selectedCSeasonName" 
-                                        ng-options="contestant.seasonName for contestant in vm.contestantsData"></select>
-                                <p class="bg-info" ng-bind="vm.selectedSeasonName.contestantName"></p>
-                            </div>   
-                            <p> This is season {{vm.selectedSeasonName.contestantName}}</p>
-                            <p>{{vm.selectedContestantName.Age}} Age </p>
-                            <p>{{vm.selectedContestantName.finish}} Finish</p>
                             
                             <div class="form-group">
                                 <label for="selectSeasonName">Season Name</label>
@@ -65,9 +55,9 @@
                             </div>   
                             <p> SeasonNumber: {{vm.selectedSeasonName.seasonNumber}}</p>
                             <p>Location of Season: {{vm.selectedSeasonName.seasonLocation}}</p>
-                            <p>Year of Season: {{vm.selectedSeasonName.yearOfSeason}}</p>
-                            <p>Month of Season: {{vm.selectedSeasonName.monthOfSeason}}</p>
-                            
+                            <p>Season year: {{vm.selectedSeasonName.yearOfSeason}}</p>
+                            <p>Month the season started: {{vm.selectedSeasonName.monthOfSeason}}</p>
+                            <!--
                             <div class="form-group">
                                 <label for="selectTribeName">Tribe</label>
                                 <select id="selectTribeName" 
@@ -76,6 +66,7 @@
                                         ng-options="tribes.originalTribe for seasons in vm.tribesData"></select>
                                 <p class="bg-info" ng-bind="vm.selectedOriginalTribe.originalTribe"></p>
                             </div>
+                            -->
                         <!--
                             <div class="form-group">
                                 <label for="selectWeight">Aircraft Weight (KG)</label>

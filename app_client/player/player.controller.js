@@ -59,7 +59,10 @@
           console.log(e);
         });
     }
+//Add here
+//function o
 
+//end add
     vm.toggleMenu = function() {
       if (vm.class === "toggled") {
         vm.class = "";
@@ -126,6 +129,7 @@
     //vm.get
     vm.getContestantsData();
     vm.getSeasonsData();
+    //vm.getOmdbData = function();
    // vm.getTribesData();
   //  vm.getClimbData();
 
