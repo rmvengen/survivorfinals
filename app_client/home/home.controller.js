@@ -17,6 +17,10 @@
     
     vm.content = "Survivor Data";
     
+    vm.getOMDBData= function(){
+      
+    }
+    /*
     vm.selectedContestantName = "";
     vm.selectedSeasonName = "";
     vm.selectedAge = "";
@@ -34,7 +38,8 @@
     //check selected weight
     if(SelectedData.selectedAge !== null){
       vm.selectedAge = SelectedData.selectedAge;
-    }      
+    }  
+    */
   }
 
 })();
